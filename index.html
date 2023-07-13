@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous">
+
+    </script>
+</head>
+<body>
+<div id="header">
+    <div id="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Front End Web Design</p>
+            <h1>Hi! I'm Charla. I build websites!</h1>
+        </div>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="left-column">
+                <img src="C:\Users\charl\OneDrive\Desktop\portfoli pic.jpg">
+            </div>
+            <div class="right-column">
+                <h2 class="subtitle">About Me</h2>
+
+                <p>Born and raised in rural Tennessee, I found my love of learning at an early age and simply never quit. My experience is robust across different industries, but easily translatable to tech.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li>HTML</li>
+                        <li>Javascript</li>
+                        <li>CSS/Bootstrap</li>
+                        <li>Familiar with React and jQuery</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Web Designer</span><br>Greenhaus Cannabis Co</li>
+                        <li><span>Web Designer</span><br>Las Margaritas Mexican Cantina</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Associates Degree</span><br>RSCC</li>
+                        <li><span>Java Certificate</span><br>freecodecamp.org</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---- services---->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="Projects">
+            <div class="project">
+                <i class="fas fa-code"></i>
+                <h2>Web Design</h2>
+                <a href="https://www.example2.com" target="_blank">
+                    <img src="C:\Users\charl\OneDrive\Desktop\quote generator.jpg" alt="Website Preview">
+                    <div class="overlay">
+                        <span>Click to view</span>
+                    </div>
+                </a>
+            </div>
+            <div class="project">
+                <i class="fas fa-code"></i>
+                <h2>Web Design</h2>
+                <a href="greenhauscc.com" target="_blank">
+                    <img src="C:\Users\charl\OneDrive\Desktop\ghccweb.jpg" alt="Website Preview">
+                    <div class="overlay">
+                        <span>Click to view</span>
+                    </div>
+                </a>
+            </div>
+            <div class="project">
+                <i class="fas fa-code"></i>
+                <h2>Web Design</h2>
+                <a href="https://www.example1.com" target="_blank">
+                    <img src="C:\Users\charl\OneDrive\Desktop\gracegivers.jpg" alt="Website Preview">
+                    <div class="overlay">
+                        <span>Click to view</span>
+                    </div>
+                </a>
+            </div>
+       </div>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> charlacooper91@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> 931-305-2644</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.style.display = "none";
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).style.display = "block";
+    }
+</script>
+</body>
+</html>
+
+
+
+
